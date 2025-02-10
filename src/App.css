@@ -23,10 +23,20 @@
   }
 }
 
+.btn {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+}
+
 img {
   animation: cookie-spin 2s linear infinite;
   width: 100px;
   height: 100px;
+}
+
+p {
+  font-size: 50px;
 }
 
 @media (prefers-reduced-motion: no-preference) {

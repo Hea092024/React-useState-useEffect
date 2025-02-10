@@ -7,18 +7,20 @@ export default function App() {
   function handleIncrement() {
     setCount(count + 1);
   }
-  function resetButton () {
-    setCount(0)
+  function resetButton() {
+    setCount(0);
   }
   return (
     <div>
       <p>{count}</p>
-      <button onClick={handleIncrement}>
+      <button className="btn" onClick={handleIncrement}>
         {" "}
         <img src={cookie} alt="a picture of a cookie" />{" "}
       </button>
 
-      <button onClick={resetButton}>Reset</button>
+      <button className="btn" onClick={resetButton}>
+        Reset
+      </button>
     </div>
   );
 }
