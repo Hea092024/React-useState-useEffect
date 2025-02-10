@@ -23,8 +23,10 @@
   }
 }
 
-.card img {
+img {
   animation: cookie-spin 2s linear infinite;
+  width: 100px;
+  height: 100px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
