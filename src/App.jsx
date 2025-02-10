@@ -11,18 +11,18 @@ export default function App() {
     setCount(0);
   }
 
-  function decrement(){
+  function decrement() {
     setCount(count - 1);
   }
   return (
     <div>
       <p>{count}</p>
       <button className="btn" onClick={handleIncrement}>
-        {" "}
-        <img src={cookie} alt="a picture of a cookie" />Increment
+        <img src={cookie} alt="a picture of a cookie" />
+        Increment
       </button>
 
-      <button id="reversedCookie" onClick={decrement}>
+      <button className="btn" onClick={decrement}>
         Decrement
         <img
           className="reversedCookieImage"
