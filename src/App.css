@@ -14,19 +14,26 @@
   }
 }
 
-@keyframes cookie-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 
 .btn {
   display: flex;
   flex-direction: column;
   margin-top: 50px;
+}
+
+@keyframes reversed-cookie-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+.reversedCookieImage {
+  animation: reversed-cookie-spin 2s linear infinite;
+  width: 100px;
+  height: 100px;
 }
 
 img {
@@ -45,10 +52,4 @@ p {
   }
 }
 
-.card {
-  padding: 2em;
-}
 
-.read-the-docs {
-  color: #888;
-}
