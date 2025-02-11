@@ -9,8 +9,8 @@ year : 2020,
     return (
         <>
         <p>{book.author}</p>
-        <p></p>
-        <p></p>
+        <p>{book.tittle}</p>
+        <p>{book.year}</p>
         </>
     )
     
