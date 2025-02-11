@@ -6,3 +6,11 @@
   flex-direction: column;
   margin-top: 50px;
 }
+
+.add-user {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;  
+  align-items: center;
+}
+

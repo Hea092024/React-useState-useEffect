@@ -48,7 +48,7 @@ const UserArray = () => {
         )}
       </div>
 
-      <div>
+      <div className="add-user">
         <h3>Add a New User:</h3>
         <input
           type="text"
