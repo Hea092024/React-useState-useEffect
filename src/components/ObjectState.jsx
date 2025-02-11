@@ -7,8 +7,8 @@ tittle: "Dungeon Crawler Carl",
 year : 2020,
 })
 
-const authorChange =() => {
-    setBook (book => ({ author: e.target.value}))
+const authorChange =(e) => {
+    setBook ((b) => ({ ... b, author: e.target.value}))
 }
 
 const tittleChange =() => {
@@ -21,6 +21,8 @@ const yearChange =() => {
 
     return (
       <>
+
+      
         <div>
           <p>{book.author}</p>
           <p>{book.tittle}</p>
