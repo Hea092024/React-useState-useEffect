@@ -15,7 +15,7 @@ export default function App() {
     setCount(count - 1);
   }
   return (
-    <div>
+    <div className="container">
       <p>{count}</p>
       <button className="btn" onClick={handleIncrement}>
         <img src={cookie} alt="a picture of a cookie" />
