@@ -6,6 +6,7 @@ function App() {
     <>
       <CookieClicker />
       <ArrayState />
+      <ObjectState />
     </>
   );
 }
