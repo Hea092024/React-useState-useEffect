@@ -5,6 +5,38 @@
   text-align: center;
 }
 
+.btn {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+}
+
+img {
+  animation: cookie-spin 2s linear infinite;
+  width: 80px;
+  height: 80px;
+  margin-bottom: 10px;
+}
+
+.reversedCookieImage {
+  animation: reversed-cookie-spin 2s linear infinite;
+  width: 80px;
+  height: 80px;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 50px;
+  margin: 20px 0;
+}
+
 @keyframes cookie-spin {
   from {
     transform: rotate(0deg);
@@ -14,40 +46,11 @@
   }
 }
 
-
-.btn {
-  display: flex;
-  flex-direction: column;
-  margin-top: 50px;
-}
-
 @keyframes reversed-cookie-spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(-360deg);
-  }
-}
-
-.reversedCookieImage {
-  animation: reversed-cookie-spin 2s linear infinite;
-  width: 100px;
-  height: 100px;
-}
-
-img {
-  animation: cookie-spin 2s linear infinite;
-  width: 100px;
-  height: 100px;
-}
-
-p {
-  font-size: 50px;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
   }
 }

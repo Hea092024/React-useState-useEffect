@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import "../styles/UserArray.css";
 const UserArray = () => {
   const mockData = [
     { username: "Ola Normann", email: "ola.normann@norge.no" },
@@ -33,7 +33,7 @@ const UserArray = () => {
 
   return (
     <>
-      <div>
+      <div className="user-list">
         <h2>List of Users:</h2>
         {users.length > 0 ? (
           <ul>
