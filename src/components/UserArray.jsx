@@ -8,28 +8,25 @@ const UserArray = () => {
     { username: "Sander", email: "sander@kodehode.no" },
   ];
 
-  const [user, setUser] = useState(mockData);
+  const [users, setUsers] = useState(mockData);
+  console.log(users); 
 
-  const userChange = (e) => {
-    setUser((u) =>
-      u.map((item, index) =>
-        index === 0 ? { ...item, author: e.target.value } : item
-      )
-    );
+  const userChange = (e, index) => {
+    const updatedUsers = [...users];
+    updatedUsers[index] = { ...updatedUsers[index], username: e.target.value };
+    setUsers(updatedUsers);
   };
 
-  const emailChange = (e) => {
-    setUser((u) =>
-      u.map((item, index) =>
-        index === 0 ? { ...item, email: e.target.value } : item
-      )
-    );
+  const emailChange = (e, index) => {
+    const updatedUsers = [...users];
+    updatedUsers[index] = { ...updatedUsers[index], email: e.target.value };
+    setUsers(updatedUsers);
   };
 
   return (
     <>
       <div>
-        {user.map((user, index) => (
+        {users.map((user, index) => (
           <div key={index}>
             <p>{user.username}</p>
             <p>{user.email}</p>
@@ -38,21 +35,25 @@ const UserArray = () => {
       </div>
 
       <div>
-        <input
-          type="text"
-          id="author"
-          value={user[0].author || ""}
-          onChange={userChange}
-        />
-        <input
-          type="text"
-          id="tittle"
-          value={user[0].tittle || ""}
-          onChange={emailChange}
-        />
-        <input type="text" id="year" value={user[0].year || ""} />
+        {users.map((user, index) => (
+          <div key={index}>
+            <input
+              type="text"
+              value={user.username}
+              onChange={(e) => userChange(e, index)}
+              placeholder="Edit Username"
+            />
+            <input
+              type="text"
+              value={user.email}
+              onChange={(e) => emailChange(e, index)}
+              placeholder="Edit Email"
+            />
+          </div>
+        ))}
       </div>
     </>
   );
 };
+
 export default UserArray;
