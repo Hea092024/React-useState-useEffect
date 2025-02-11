@@ -6,6 +6,19 @@ author : "Matt Damon",
 tittle: "Dungeon Crawler Carl",
 year : 2020,
 })
+
+const authorChange =() => {
+    setBook (book => ({ author: e.target.value}))
+}
+
+const tittleChange =() => {
+
+}
+
+const yearChange =() => {
+
+}
+
     return (
       <>
         <div>
