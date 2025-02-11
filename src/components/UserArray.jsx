@@ -9,48 +9,60 @@ const UserArray = () => {
   ];
 
   const [users, setUsers] = useState(mockData);
-  console.log(users); 
+  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
 
-  const userChange = (e, index) => {
-    const updatedUsers = [...users];
-    updatedUsers[index] = { ...updatedUsers[index], username: e.target.value };
-    setUsers(updatedUsers);
+  const handleUsernameChange = (e) => {
+    setUsername(e.target.value);
   };
 
-  const emailChange = (e, index) => {
-    const updatedUsers = [...users];
-    updatedUsers[index] = { ...updatedUsers[index], email: e.target.value };
-    setUsers(updatedUsers);
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+  };
+
+  const handleAddUser = () => {
+    if (username && email) {
+      const newUser = { username, email };
+      setUsers([...users, newUser]);
+      setUsername("");
+      setEmail("");
+    } else {
+      alert("Please fill out both username and email.");
+    }
   };
 
   return (
     <>
       <div>
-        {users.map((user, index) => (
-          <div key={index}>
-            <p>{user.username}</p>
-            <p>{user.email}</p>
-          </div>
-        ))}
+        <h2>List of Users:</h2>
+        {users.length > 0 ? (
+          <ul>
+            {users.map((user, index) => (
+              <li key={index}>
+                {user.username} - {user.email}
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <p>No users added yet.</p>
+        )}
       </div>
 
       <div>
-        {users.map((user, index) => (
-          <div key={index}>
-            <input
-              type="text"
-              value={user.username}
-              onChange={(e) => userChange(e, index)}
-              placeholder="Edit Username"
-            />
-            <input
-              type="text"
-              value={user.email}
-              onChange={(e) => emailChange(e, index)}
-              placeholder="Edit Email"
-            />
-          </div>
-        ))}
+        <h3>Add a New User:</h3>
+        <input
+          type="text"
+          placeholder="Username"
+          value={username}
+          onChange={handleUsernameChange}
+        />
+        <input
+          type="email"
+          placeholder="Email"
+          value={email}
+          onChange={handleEmailChange}
+        />
+        <button onClick={handleAddUser}>Add User</button>
       </div>
     </>
   );
