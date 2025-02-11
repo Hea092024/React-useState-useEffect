@@ -1,6 +1,6 @@
 import { useState } from "react";
 import cookie from "/cookie.png";
-import CookieStyle from "../components/CookieStyle.css";
+import   "../components/CookieStyle.css";
 
 export default function App() {
   const [count, setCount] = useState(0);
