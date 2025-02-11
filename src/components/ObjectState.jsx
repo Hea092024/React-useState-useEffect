@@ -1,10 +1,11 @@
 import { useState } from "react";
 
-const objectState = () => {
+const ObjectState = () => {
     return (
         <>
-        
+        <p>test</p>
         </>
     )
     
 }
+export default ObjectState
