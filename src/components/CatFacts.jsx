@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import "../styles/CatFactsStyle.css";
 
 export default function CatFacts() {
   const [data, setData] = useState([]);
@@ -14,7 +15,7 @@ export default function CatFacts() {
         if (!response.ok)
           throw new Error(`HTTP error. Status ${response.status}`);
         const result = await response.json();
-        setData(result.data); // This stores the list of facts in the data array
+        setData(result.data);
       } catch (error) {
         setError(error.message);
       } finally {
