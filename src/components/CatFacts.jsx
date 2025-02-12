@@ -27,6 +27,7 @@ export default function CatFacts() {
   return (
     <div>
       {loading && <p>Loading...</p>}
+      {error && <p style={{color: "red"}}>Error: {error}</p>}
     </div>
   );
 }
