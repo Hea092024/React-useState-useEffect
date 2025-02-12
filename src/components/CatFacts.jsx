@@ -5,7 +5,9 @@ export default function CatFacts() {
     const [loading, setLoading] = useState (true)
     const [error, settError] = useState(null)
 
-}
+    useEffect(() =>{}, [])
+
+
     return(
 
 
