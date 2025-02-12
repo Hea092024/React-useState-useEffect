@@ -26,7 +26,7 @@ export default function CatFacts() {
 
   return (
     <div>
-      <h1>Hei</h1>
+      {loading && <p>Loading...</p>}
     </div>
   );
 }
