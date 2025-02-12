@@ -1,10 +1,14 @@
 import { useState } from "react";
 import CookieClicker from "./components/CookieClicker.jsx"
 import UserArray from "./components/UserArray.jsx"
+import DarkMode from "./components/DarkMode.jsx";
 
 function App() {
+
+
   return (
     <>
+      <DarkMode />
       <CookieClicker />
       <UserArray />
     </>

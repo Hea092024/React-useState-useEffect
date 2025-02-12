@@ -2,7 +2,7 @@ import { useState } from "react";
 import cookie from "/cookie.png";
 import   "../styles/CookieStyle.css";
 
-export default function App() {
+export default function CookieClicker() {
   const [count, setCount] = useState(0);
   function handleIncrement() {
     setCount(prev => prev + 1);
