@@ -1,0 +1,11 @@
+#cat-container {
+  display: flex;
+  flex-direction: column;
+}
+
+#cat-container p {
+  background-color: #ffffff;
+  max-width: 500px;
+  padding: 20px;
+  font-size: 20px;
+}

@@ -1,0 +1,57 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  
+
+}
+
+@keyframes cookie-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+.btn {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+}
+
+@keyframes reversed-cookie-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+.reversedCookieImage {
+  animation: reversed-cookie-spin 2s linear infinite;
+  width: 100px;
+  height: 100px;
+}
+
+img {
+  animation: cookie-spin 2s linear infinite;
+  width: 100px;
+  height: 100px;
+}
+
+p {
+  font-size: 50px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+

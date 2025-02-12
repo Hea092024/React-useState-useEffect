@@ -1,0 +1,62 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.btn {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+}
+
+img {
+  animation: cookie-spin 2s linear infinite;
+  width: 80px;
+  height: 80px;
+  margin-bottom: 10px;
+}
+
+.reversedCookieImage {
+  animation: reversed-cookie-spin 2s linear infinite;
+  width: 80px;
+  height: 80px;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 50px;
+  margin: 20px 0;
+}
+
+@keyframes cookie-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes reversed-cookie-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
