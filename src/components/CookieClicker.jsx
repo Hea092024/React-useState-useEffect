@@ -8,7 +8,7 @@ export default function App() {
     setCount(prev => prev + 1);
   }
   function resetButton() {
-    setCount(0);
+    setCount(prev => prev = 0);
   }
 
   function decrement() {
