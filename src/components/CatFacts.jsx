@@ -3,10 +3,29 @@ export default function CatFacts() {
 
     const [data, setData] = useState (null)
     const [loading, setLoading] = useState (true)
-    const [error, settError] = useState(null)
+    const [error, setError] = useState(null)
 
-    useEffect(() =>{}, [])
+    useEffect(() =>{
+        const fetchData = async () => {
+setLoading(true)
+setError(null)
+try{
+    const response = await fetch ("https://catfact.ninja/facts?limit=5")
+    if (!response.ok)
+        throw new Error (`HTTP error. Status ${response.status}`)
+}
+const result = await response.json()
+setData(result)
+        }
+        catch (error) {
+            setError {error.message}
+        }
+        finally { 
+            setLoading(false);
+        }
 
+    }, [])
+fetchData ()
 
     return(
 
@@ -15,4 +34,4 @@ export default function CatFacts() {
             <h1>Hei</h1>
         </div>
     )
-}
+};
