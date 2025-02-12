@@ -1,5 +1,4 @@
 import { useState } from "react";
-import React, { useEffect } from "react";
 import "../styles/UserArray.css";
 const UserArray = () => {
   const mockData = [
