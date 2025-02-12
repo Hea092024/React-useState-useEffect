@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 export default function CatFacts() {
-  const [data, setData] = useState(null);
+  const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -14,7 +14,7 @@ export default function CatFacts() {
         if (!response.ok)
           throw new Error(`HTTP error. Status ${response.status}`);
         const result = await response.json();
-        setData(result);
+        setData(result.data); // This stores the list of facts in the data array
       } catch (error) {
         setError(error.message);
       } finally {
@@ -25,9 +25,11 @@ export default function CatFacts() {
   }, []);
 
   return (
-    <div>
+    <div id="cat-container">
       {loading && <p>Loading...</p>}
-      {error && <p style={{color: "red"}}>Error: {error}</p>}
+      {error && <p style={{ color: "red" }}>Error: {error}</p>}
+      {data.length > 0 &&
+        data.map((catFact, index) => <p key={index}>{catFact.fact}</p>)}
     </div>
   );
 }
