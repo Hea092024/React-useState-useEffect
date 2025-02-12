@@ -12,7 +12,7 @@ export default function App() {
   }
 
   function decrement() {
-    setCount(count - 1);
+    setCount(prev => prev - 1);
   }
   return (
     <div className="container">
