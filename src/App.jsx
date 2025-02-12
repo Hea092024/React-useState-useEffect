@@ -7,7 +7,6 @@ function App() {
 
   return (
     <>
-      <DarkMode />
       <CookieClicker />
       <UserArray />
     </>
