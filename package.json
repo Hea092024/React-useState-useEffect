@@ -1,12 +1,12 @@
 {
-  "homepage": "https://hea092024.github.io/react-useState-useEffect",
+  "homepage": "https://hea092024.github.io/React-useState-useEffect/",
   "name": "react-usestate-useeffect",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite --open",
+    "build": "vite build",
     "serve": "vite preview",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"

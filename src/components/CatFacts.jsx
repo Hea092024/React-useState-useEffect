@@ -27,6 +27,7 @@ export default function CatFacts() {
 
   return (
     <div id="cat-container">
+      <h1>Cat Facts</h1>
       {loading && <p>Loading...</p>}
       {error && <p style={{ color: "red" }}>Error: {error}</p>}
       {data.length > 0 &&
